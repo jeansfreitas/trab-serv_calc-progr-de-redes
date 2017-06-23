@@ -45,3 +45,9 @@ while True:
     result = operCalc(message)
     print("\n", result)
     serverCalc.sendto(result.encode(), clientAddress)
+    client.send(byte_msg)
+    if not data: break
+    print(" Mensagem recebida:", data)
+
+client.close()
+tcp_server_socket.close()
